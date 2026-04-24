@@ -1,0 +1,166 @@
+# =============================================================================
+# Generalization Theory Deep Dive — .gitignore
+# =============================================================================
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Distribution / Packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Jupyter Notebook ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ── NumPy / SciPy / PyTorch / JAX cache ──────────────────────────────────────
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.safetensors
+
+# Framework caches (PyTorch, JAX, neural-tangents)
+.torch_cache/
+.jax_cache/
+.nt_cache/
+~/.cache/jax/
+
+# HuggingFace / datasets cache (scaling law 실험에서 텍스트 데이터 사용 시)
+.cache/huggingface/
+datasets_cache/
+
+# ── Experiment outputs ───────────────────────────────────────────────────────
+# 생성된 이미지 파일 (각 챕터의 시각화 결과물)
+# Ch1: random label 실험 loss curve, Ch3: NTK width convergence,
+# Ch4: Double Descent plot, Ch5: Grokking train/test curve,
+# Ch6: Lottery Ticket sparsity·accuracy, Ch7: scaling law fit
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.gif
+*.mp4
+
+# 훈련 결과 / 체크포인트
+results/
+outputs/
+logs/
+checkpoints/
+runs/
+wandb/
+mlruns/
+tensorboard/
+*.log
+*.csv
+*.h5
+*.hdf5
+
+# 재현 실험 산출물
+reproductions/zhang2017/*.pt
+reproductions/belkin2019/*.npz
+reproductions/jacot2018/*.npz
+reproductions/power2022/*.pt
+reproductions/frankle2019/*.pt
+reproductions/hoffmann2022/*.npz
+
+# 다운로드된 데이터셋 (CIFAR, MNIST 등)
+data/
+datasets/
+!data/.gitkeep
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────────
+# JetBrains (PyCharm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+
+# ── Documentation build ──────────────────────────────────────────────────────
+docs/_build/
+docs/generated/
+site/
+.mkdocs_cache/
+
+# ── Secrets / Credentials ────────────────────────────────────────────────────
+.env.local
+.env.*.local
+secrets.py
+credentials.json
+*.pem
+*.key
+
+# ── Miscellaneous ────────────────────────────────────────────────────────────
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+*.mo
+*.pot
