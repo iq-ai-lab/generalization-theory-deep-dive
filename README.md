@@ -20,7 +20,7 @@ Zhang et al. 2017의 random label 실험부터 Bartlett의 norm-based bound · N
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![NT](https://img.shields.io/badge/Neural_Tangents-0.6-FF6F61?style=flat-square)](https://github.com/google/neural-tangents)
 [![Docs](https://img.shields.io/badge/Docs-33개-blue?style=flat-square&logo=readthedocs&logoColor=white)](./README.md)
-[![Lines](https://img.shields.io/badge/Lines-16k+-informational?style=flat-square)](./README.md)
+[![Lines](https://img.shields.io/badge/Lines-10k+-informational?style=flat-square)](./README.md)
 [![Theorems](https://img.shields.io/badge/Theorems_proven-72개-success?style=flat-square)](./README.md)
 [![Reproductions](https://img.shields.io/badge/Paper_reproductions-9개-critical?style=flat-square)](./README.md)
 [![Exercises](https://img.shields.io/badge/Exercises-99개-orange?style=flat-square)](./README.md)
@@ -261,7 +261,7 @@ Zhang et al. 2017의 random label 실험부터 Bartlett의 norm-based bound · N
 | **Schaeffer 2023 Emergent Mirage** | Discontinuous metric → emergent, continuous metric → smooth | [Ch7-03](./ch7-scaling-laws/03-emergent-vs-mirage.md) |
 | **von Oswald 2023 ICL=GD** | Transformer attention이 linear regression ICL에서 GD와 동치 | [Ch7-04](./ch7-scaling-laws/04-icl-theory.md) |
 
-> 💡 **챕터별 문서·정리 수**: Ch1(5문서, 9정리) · Ch2(5문서, 11정리) · Ch3(6문서, 15정리) · Ch4(5문서, 12정리) · Ch5(4문서, 8정리) · Ch6(4문서, 8정리) · Ch7(4문서, 9정리) — 합계 **33문서 + 72 정리·실험**, 약 **16,000+ 라인** 분량.
+> 💡 **챕터별 문서·정리 수**: Ch1(5문서, 9정리) · Ch2(5문서, 11정리) · Ch3(6문서, 15정리) · Ch4(5문서, 12정리) · Ch5(4문서, 8정리) · Ch6(4문서, 8정리) · Ch7(4문서, 9정리) — 합계 **33문서 + 72 정리·실험**, 약 **9,600+ 라인** 분량 (추가 예제·확장 포함 목표 16k).
 
 ---
 
@@ -382,7 +382,7 @@ class GrokNet(nn.Module):
 >
 > 🧭 **푸터 네비게이션**: 각 문서 하단에 `◀ 이전 / 📚 README / 다음 ▶` 링크가 항상 제공됩니다. 챕터 경계에서도 다음 챕터 첫 문서로 자동 연결됩니다.
 >
-> ⏱️ **학습 시간 추정**: 문서당 평균 485줄(증명·코드·연습문제 포함) 기준 **약 1~1.5시간**. 전체 33문서는 약 **40~50시간** 상당.
+> ⏱️ **학습 시간 추정**: 문서당 평균 약 290줄(증명·코드·연습문제 포함) 기준 **약 45분~1시간**. 전체 33문서는 약 **25~35시간** 상당 (증명 재구성·실험 재현 포함 시 40시간+).
 
 ---
 
@@ -432,7 +432,7 @@ Day 7  Ch7-01  Chinchilla scaling
 </details>
 
 <details>
-<summary><b>🔴 "딥러닝 일반화 이론의 현재 경계를 완전 정복한다" — 전체 정복 (10주, 약 40~50시간)</b></summary>
+<summary><b>🔴 "딥러닝 일반화 이론의 현재 경계를 완전 정복한다" — 전체 정복 (10주, 약 25~35시간 + 실험 재현 10~15시간)</b></summary>
 
 <br/>
 
