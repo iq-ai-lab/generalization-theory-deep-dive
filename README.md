@@ -2,15 +2,35 @@
 
 # 🧠 Generalization Theory Deep Dive
 
-**"큰 모델이 잘 일반화한다고 말하는 것과, 왜 ResNet50의 VC bound가 `gap ≤ 10¹²`로 vacuous한지, Double Descent에서 test error가 `p=n`에서 발산하는 이유를 `Mei & Montanari 2019`의 asymptotic으로 유도할 수 있는 것은 다르다"**
+### 큰 모델이 잘 일반화한다고 **말하는 것** 과,
+
+### 왜 ResNet-50 의 VC bound 가
+
+$$\text{gap} \leq 10^{12} \quad (\text{vacuous})$$
+
+### 인지, **Double Descent** 에서 test error 가 $p = n$ 에서 발산하는 이유를 Mei & Montanari 2019 의 asymptotic 으로 유도할 수 있는 것은 **다르다.**
 
 <br/>
 
-> *"Neural Tangent Kernel을 이름으로 아는 것과 — `Θ(x,y) = ⟨∇_θ f(x;θ), ∇_θ f(y;θ)⟩`가 무한폭 극한에서 상수 kernel로 수렴하고 훈련 역학이 kernel regression으로 환원되는 것을 `Jacot et al. 2018`의 증명으로 따라갈 수 있는 것은 다르다.  
-> Grokking을 현상으로 아는 것과, modular arithmetic에서 train loss가 0이 된 후 수천 epoch 뒤에 test accuracy가 튀어 오르는 이유를 weight norm dynamics와 representation phase transition으로 설명할 수 있는 것은 다르다."*
+> *Neural Tangent Kernel 을 **이름으로 아는 것** 과,*
+>
+> $$\Theta(x, y) = \bigl\langle \nabla_\theta f(x;\theta),\, \nabla_\theta f(y;\theta)\bigr\rangle$$
+>
+> *가 무한폭 극한에서 **상수 kernel 로 수렴** 하고 훈련 역학이 **kernel regression 으로 환원** 되는 것을 Jacot et al. 2018 의 증명으로 따라갈 수 있는 것은 다르다.*
+>
+> *Grokking 을 **현상으로 아는 것** 과, modular arithmetic 에서 train loss 가 0 이 된 후 수천 epoch 뒤에 test accuracy 가 튀어 오르는 이유를 **weight norm dynamics + representation phase transition** 으로 설명할 수 있는 것은 다르다.*
 
-Zhang et al. 2017의 random label 실험부터 Bartlett의 norm-based bound · NTK의 kernel regression 환원 · Belkin의 Double Descent · Power의 Grokking · Frankle의 Lottery Ticket · Chinchilla scaling laws까지  
-**"왜 과매개변화된 딥러닝이 일반화하는가"** 라는 열린 질문으로 고전 이론의 실패부터 현대 이론의 경계까지 끝까지 파헤칩니다
+<br/>
+
+**다루는 정리·현상 (시간순)**
+
+Vapnik–Chervonenkis 1971 *VC dimension* · Bartlett 1998 *norm-based bound* · McAllester 1999 *PAC-Bayes* · Zhang 2017 *random label = 고전 이론 붕괴* · Jacot 2018 *NTK 무한폭 극한* · Belkin 2019 *Double Descent* · Frankle–Carbin 2019 *Lottery Ticket* · Mei–Montanari 2019 *asymptotic risk* · Power 2022 *Grokking* · Hoffmann 2022 *Chinchilla scaling*
+
+<br/>
+
+**핵심 질문**
+
+> **왜 과매개변화된 딥러닝이 일반화하는가** — 고전 이론 (VC · Rademacher) 의 실패부터 현대 이론 (NTK · Double Descent · Grokking · Scaling Laws) 의 경계까지, 열린 질문을 끝까지 파헤칩니다.
 
 <br/>
 
